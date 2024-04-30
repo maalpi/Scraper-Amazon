@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#results {
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#results a{
+    margin-top: 2%;
+}
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.product img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#loading {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#loading::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-top-color: #007bff;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
