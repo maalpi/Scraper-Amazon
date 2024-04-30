@@ -8,6 +8,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
     // Recebendo os dados e selecionando a Div ao quais serão adicionados
     const resultsDiv = document.getElementById('results');
 
+    // Exibindo o elemento de carregamento e limpando o conteúdo anterior dos resultados
     loading.style.display = 'block';
     resultsDiv.innerHTML = '';
 
@@ -26,6 +27,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
             return;
         }
 
+        // Iterando sobre os produtos recebidos e criando elementos HTML para exibição na página
         data.forEach(product => {
             const productDiv = document.createElement('div');
             productDiv.classList.add('produto');
@@ -49,12 +51,14 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
             link.style.display = "block"; // Move o link para a próxima linha
             link.style.fontSize = "14px"; // Define o tamanho da fonte do link
 
+            // Adicionando os elementos criados ao elemento de resultados
             productDiv.appendChild(title);
             productDiv.appendChild(rating);
             productDiv.appendChild(numReviews);
             productDiv.appendChild(image);
             productDiv.appendChild(link);
 
+            // Adicionando o elemento do produto ao resultado final
             resultsDiv.appendChild(productDiv);
         });
 
